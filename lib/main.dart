@@ -22,7 +22,8 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text('Hello'),
-    );
+        body: Container(
+      child: Center(child: Text('Text')),
+    ));
   }
 }
