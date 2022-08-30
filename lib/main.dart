@@ -21,17 +21,25 @@ void func() {
 }
 
 class MyHomePage extends StatelessWidget {
-  const MyHomePage({Key? key}) : super(key: key);
+  int count = 10;
+  MyHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      child: Center(
-          child: TextButton(
-        onPressed: func,
-        child: Text('BUTTON'),
-      )),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 290, horizontal: 150),
+        child: Column(
+          children: [
+            Text('Count:$count'),
+            TextButton(
+              onPressed: func,
+              child: Text('BUTTON'),
+            ),
+          ],
+        ),
+      ),
     ));
   }
 }
