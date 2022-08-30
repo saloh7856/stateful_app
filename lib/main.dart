@@ -16,6 +16,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
+void func() {}
+
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
 
@@ -23,7 +25,11 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
-      child: Center(child: Text('Text')),
+      child: Center(
+          child: TextButton(
+        onPressed: func,
+        child: Text('BUTTON'),
+      )),
     ));
   }
 }
