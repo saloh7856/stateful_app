@@ -16,12 +16,14 @@ class MyApp extends StatelessWidget {
   }
 }
 
-void func() {
-  print('Button pressed');
-}
-
 class MyHomePage extends StatelessWidget {
   int count = 10;
+
+  void func() {
+    count += 5;
+    print('Button pressed: $count');
+  }
+
   MyHomePage({Key? key}) : super(key: key);
 
   @override
