@@ -32,9 +32,16 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       count += 5;
     });
-
     print('Button pressed: $count');
   }
+    
+     void l() {
+    setState(() {
+      count -= 5;
+    });
+    print('Button pressed: $count');
+     }
+
 
   @override
   Widget build(BuildContext context) {
@@ -44,10 +51,13 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: const EdgeInsets.symmetric(vertical: 290, horizontal: 150),
         child: Column(
           children: [
+            TextButton(
+              onPressed: l,
+             child: Text('-')),
             Text('Count:$count'),
             TextButton(
               onPressed: func,
-              child: Text('BUTTON'),
+              child: Text('+'),
             ),
           ],
         ),
