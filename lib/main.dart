@@ -16,7 +16,9 @@ class MyApp extends StatelessWidget {
   }
 }
 
-void func() {}
+void func() {
+  print('Button pressed');
+}
 
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key}) : super(key: key);
