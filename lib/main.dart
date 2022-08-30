@@ -16,15 +16,25 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
+  MyHomePage({Key? key}) : super(key: key);
+
+  @override
+  State<MyHomePage> createState() {
+    return _MyHomePageState();
+  }
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   int count = 10;
 
   void func() {
-    count += 5;
+    setState(() {
+      count += 5;
+    });
+
     print('Button pressed: $count');
   }
-
-  MyHomePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
